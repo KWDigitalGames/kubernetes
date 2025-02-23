@@ -25,16 +25,10 @@ spec:
           limits:
             memory: "256Mi"
             cpu: "500m"
-        env:
-          - name: user
-            value: rpgapp_user
-          - name: port
-            value: '5432'
-          - name: database
-            value: rpgapp
-          - name: password
-            value: password
-          - name: host
-            value: rpgapp-db
+        envFrom:
+          - configMapRef:
+              name: rpgapp-api-config
+          - secretRef:
+              name: rpgapp-api-secret
         ports:
         - containerPort: 5000

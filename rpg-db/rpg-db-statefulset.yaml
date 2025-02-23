@@ -19,9 +19,9 @@ spec:
       containers:
       - name: rpgapp-db
         image: bunchieldz/postgres:1.0
-        env:
-          - name: POSTGRES_PASSWORD
-            value: "mypassword"
+        envFrom:
+          - secretRef:
+              name: rpgapp-db-secret
         ports:
         - containerPort: 5432
         volumeMounts:
