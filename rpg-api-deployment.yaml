@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: rpgapp-api
-        image: bunchieldz/statelessapp:1.0
+        image: bunchieldz/statefullapp:1.0
         resources:
           requests:
             memory: "128Mi"
@@ -25,5 +25,16 @@ spec:
           limits:
             memory: "256Mi"
             cpu: "500m"
+        env:
+          - name: user
+            value: rpgapp_user
+          - name: port
+            value: '5432'
+          - name: database
+            value: rpgapp
+          - name: password
+            value: password
+          - name: host
+            value: rpgapp-db
         ports:
         - containerPort: 5000
