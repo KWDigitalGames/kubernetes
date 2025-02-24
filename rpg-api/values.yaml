@@ -1,0 +1,21 @@
+microservice:   ## general service details 
+  name: rpgapp-api
+  namespace: rpgapp-namespace
+  replicas: 2
+
+workload:   ## container specific configurations
+  image: bunchieldz/statefullapp:1.0
+  port: 5000
+  resources:
+    memory: "128Mi"
+    cpu: "128m"
+  livenessDelay: 15
+
+env: 
+  user: rpgapp_user
+  port: '5432'
+  database: rpgapp
+  host: rpgapp-db
+
+secrets:
+  password: 'cGFzc3dvcmQ='

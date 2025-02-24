@@ -1,0 +1,4 @@
+apiVersion: v2
+name: rpg-app-api
+description: A Helm chart for deploying the RPG App API, a backend service for managing characters data.
+version: 1.0.0
