@@ -2,10 +2,10 @@
 
 This project consists of FLASK API application writing to PostgreSQL database. Both applications are containerized, images are pulled from Docker Hub during the installation process. The application is supposed to be a basis of RPG web browser game and provides following endpoints:
 
-POST /character/create - create a new character, requires three arguments: name, level, ID
-GET /characters - get list of all characters
-GET /character/<name> - get information about particular character
-GET /metrics - provides information on application related metrics, provided by prometheus_flask_exporter
+* POST /character/create - create a new character, requires three arguments: name, level, ID
+* GET /characters - get list of all characters
+* GET /character/<name> - get information about particular character
+* GET /metrics - provides information on application related metrics, provided by prometheus_flask_exporter
 
 # Installation
 
@@ -28,7 +28,7 @@ helm install rpg-app-api ./rpg-api/rpg-app-api-1.0.0.tgz
 
 # Usage
 
-Create new characters:
+Create new character:
 ```
 curl --header "Content-Type: application/json" \
   --request POST \
