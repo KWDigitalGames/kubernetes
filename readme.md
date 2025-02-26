@@ -42,9 +42,9 @@ curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET
 
 # To do
 
-To be implemented in the future:
-Prometheus sidecar container
-Helm chart to install PostgreSQL database 
-Simple frotend page with form to enter new character data
-Auto numerating new IDs in character entries written to DB
-/health endpoint
+* To be implemented in the future:
+* Prometheus sidecar container
+* Helm chart to install PostgreSQL database 
+* Simple frotend page with form to enter new character data
+* Auto numerating new IDs in character entries written to DB
+* /health endpoint
